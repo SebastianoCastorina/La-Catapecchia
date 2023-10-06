@@ -18,9 +18,17 @@
             </button>
             <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav flex-grow-1">
-                    <li>@Html.ActionLink("Accedi", "Index", "Login", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Clienti", "Index", "Clienti", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Camere", "Index", "Camere", new { area = "" }, new { @class = "nav-link" })</li>
+                    @if (User.IsInRole("admin"))
+                    {
+                        <li>@Html.ActionLink("Clienti", "Index", "Clienti", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Camere", "Index", "Camere", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Servizi", "Index", "Servizi", new { area = "" }, new { @class = "nav-link" })</li>
+                    }
+                    else
+                    {
+                        <li>@Html.ActionLink("Accedi", "Index", "Login", new { area = "" }, new { @class = "nav-link" })</li>
+}
+
                 </ul>
             </div>
         </div>

@@ -9,6 +9,7 @@ namespace La_Catapecchia.Models
     {
         public int IdCamera { get; set; }
         public string DescrizioneCamera { get; set; }
-        public bool SingolaDoppia { get; set; }
+        public bool Singola { get; set; }
+        public double Prezzo { get; set; }
     }
 }

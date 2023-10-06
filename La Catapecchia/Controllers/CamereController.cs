@@ -1,4 +1,5 @@
-﻿using System;
+﻿using La_Catapecchia.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,7 @@ namespace La_Catapecchia.Controllers
         // GET: Camere
         public ActionResult Index()
         {
-            return View();
+            return View(DB.getAllRooms());
         }
     }
 }

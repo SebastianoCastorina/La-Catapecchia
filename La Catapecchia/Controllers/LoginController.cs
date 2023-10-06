@@ -24,7 +24,7 @@ namespace La_Catapecchia.Controllers
                 if (user.Password == u.Password)
                 {
                     FormsAuthentication.SetAuthCookie(u.Username, false);
-                    return RedirectToAction("Index");
+                    return RedirectToAction("Index", "Camere");
                 }
                 else
                 {
